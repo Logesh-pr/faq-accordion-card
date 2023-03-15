@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Text */
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+
+  /* Background gradient */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+
+  /* Neutral */
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  border-style: none;
+  background-color: transparent;
+  outline: none;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    180deg,
+    var(--Soft-violet),
+    var(--Soft-blue)
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: min(950px, 85%);
+  margin: 0 auto;
+  margin-top: 10rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 19px 29px -15px rgba(0, 0, 0, 0.36);
+  display: flex;
+  flex-direction: column;
+}
+.img_container {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.bg_img_1 {
+  width: 250px;
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg_img_2 {
+  display: none;
+}
+.main_img_1 {
+  position: absolute;
+  width: 250px;
+  top: -1.2rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+.main_img_2 {
+  display: none;
+}
+.box_img {
+  display: none;
+}
+.content_container {
+  padding: 1rem 1.2rem 3rem 1.2rem;
+}
+.faq_heading {
+  text-align: center;
+  font-weight: 700;
+  color: var(--Very-dark-desaturated-blue);
+}
+.faq_btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faq_btn svg {
+  padding: 0 0.2rem;
+}
+.faq_question {
+  text-align: start;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--Dark-grayish-blue);
+  transition: 0.2s ease-in;
+}
+.faq:hover .faq_question {
+  color: var(--Soft-red);
+  transition: 0.2s ease-in;
+}
+.faq.active .faq_question {
+  font-weight: 700;
+  color: var(--Very-dark-grayish-blue);
+}
+.arrow_icon {
+  transition: 0.2s ease-in;
+}
+.faq.active .arrow_icon {
+  transform: rotate(180deg);
+}
+.faq_para {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+  line-height: 1.6;
+  display: none;
+  transition: 0.2s ease-in;
+}
+.faq.active .faq_para {
+  display: block;
+}
+.faq {
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--Light-grayish-blue);
+}
+.faq_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.attribution {
+  margin-top: 3rem;
+  text-align: center;
+  color: #fed90c;
+}
+.attribution a {
+  color: white;
+}
+
+@media only screen and (min-width: 29.375em) /*480px*/ {
+  .bg_img_1 {
+    top: 4.5rem;
+    width: 300px;
+  }
+  .main_img_1 {
+    width: 300px;
+  }
+  .content_container {
+    padding: 1rem 1.5rem 3rem 1.5rem;
+  }
+}
+@media only screen and (min-width: 48em) /*768px*/ {
+  .bg_img_1 {
+    width: 370px;
+  }
+  .main_img_1 {
+    width: 370px;
+  }
+  .content_container {
+    padding: 3rem 1.5rem 3rem 2rem;
+  }
+  .faq_container {
+    row-gap: 1rem;
+  }
+  .faq_btn {
+    padding: 0 0.7rem;
+  }
+}
+@media only screen and (min-width: 62em) /*992px*/ {
+  .container {
+    margin-top: 0;
+    position: relative;
+    height: 570px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img_container {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+  .content_container {
+    width: 50%;
+    height: 100%;
+    padding: 0 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .faq_heading {
+    text-align: start;
+    align-self: start;
+  }
+  .bg_img_1 {
+    display: none;
+  }
+  .main_img_1 {
+    display: none;
+  }
+  .bg_img_2 {
+    display: block;
+    width: 700px;
+    height: 830px;
+    position: absolute;
+    top: -14rem;
+    left: -23rem;
+  }
+  .main_img_2 {
+    display: block;
+    position: absolute;
+    width: 400px;
+    top: 7rem;
+    left: -4rem;
+  }
+  .box_img {
+    display: block;
+    position: absolute;
+    top: 41%;
+    left: -4.6rem;
+    z-index: 10;
+    width: 150px;
+  }
+}
